@@ -8,7 +8,7 @@ export default function Main() {
   return (
     <div className="relative overflow-hidden">
       <div className="py-12 md:py-14 max-w-7xl mx-auto flex flex-col px-4 md:px-6">
-        <div className="container md:gap-12 lg:gap-24 flex flex-row justify-between">
+        <div className="lg:container md:gap-8 lg:gap-20 flex lg:flex-row justify-between flex-col-reverse gap-4">
           <div className="flex flex-col min-[300px]:grid gap-4 md:gap-8 lg:gap-12">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
@@ -52,17 +52,20 @@ export default function Main() {
             />
           </div>
         </div>
-        <div className="max-w-[600px]  space-y-1 justify-start px-4 md:px-8 pt-6">
-          <h3 className="text-xl font-bold">Habilidades</h3>
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            Node.Js, React, Next.js, Flutter, Prisma, JavaScript, Tailwind CSS.
-          </p>
-        </div>
-        <div className="max-w-[600px] space-y-1 justify-start px-4 md:px-8 pt-6">
-          <h3 className="text-xl font-bold">Educação</h3>
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            Engenharia de computação, UNIVASF (2022 - Cursando)
-          </p>
+        <div className="space-y-4 py-4">
+          <div className="max-w-[600px] space-y-1 justify-start px-4 md:px-8 lg:pt-6">
+            <h3 className="text-xl font-bold">Habilidades</h3>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              Node.Js, React, Next.js, Flutter, Prisma, JavaScript, Tailwind
+              CSS.
+            </p>
+          </div>
+          <div className="max-w-[600px] space-y-1 justify-start px-4 md:px-8 lg:pt-6">
+            <h3 className="text-xl font-bold">Educação</h3>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              Engenharia de computação, UNIVASF (2022 - Cursando)
+            </p>
+          </div>
         </div>
       </div>
     </div>

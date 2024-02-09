@@ -4,19 +4,19 @@ export default function Projects() {
   return (
     <div
       id="projects"
-      className="w-full border-t border-gray-200 dark:border-gray-800 h-screen"
+      className="w-full border-t border-gray-200 dark:border-gray-800 lg:h-screen"
     >
       <section className="container md:py-8 px-4 md:px-6">
         <div className="grid gap-4 md:gap-8 lg:gap-12">
           <div className="">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+            <h2 className="mt-10 text-3xl font-bold tracking-tighter sm:text-4xl lg:mt-0">
               Projetos
             </h2>
             <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 py-1">
               Alguns dos projetos que estou trabalhando ultimamente.
             </p>
           </div>
-          <div className="flex flex-wrap gap-4 md:gap-8 lg:gap-10">
+          <div className="flex flex-col items-center lg:flex-row md:gap-8 lg:flex-wrap lg:items-start gap-4 lg:gap-10 ">
             <CardComponent
               title={"Scasys"}
               tec={"Typescript"}
