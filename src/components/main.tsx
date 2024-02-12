@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 
 export default function Main() {
-  const dm = document.getElementById("projects");
+  function scrollToBottom() {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth", // para um scroll suave
+    });
+  }
 
   return (
     <div className="relative overflow-hidden">
@@ -19,6 +24,7 @@ export default function Main() {
                 junção entre design e código que o desenvolvimento Web traz.
               </p>
             </div>
+
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Link
                 className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-white px-8 text-sm font-medium shadow-sm gap-2 transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50  dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-950 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
@@ -29,9 +35,7 @@ export default function Main() {
               </Link>
               <Button
                 className="text-black  inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-white px-8 text-sm font-medium shadow-sm gap-2 transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-950 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-                onClick={() => {
-                  dm?.scrollIntoView({ behavior: "smooth" });
-                }}
+                onClick={scrollToBottom}
               >
                 Projetos
                 <ArrowRightIcon className="w-4 h-4" />
