@@ -1,6 +1,5 @@
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { Link } from "react-router-dom";
-import { Button } from "./ui/button";
 
 export default function Main() {
   function scrollToBottom() {

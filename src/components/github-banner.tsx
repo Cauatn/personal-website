@@ -1,5 +1,3 @@
-import { ModeToggle } from "./mode-toggle";
-
 export default function GithubBanner() {
   return (
     <div className="flex gap-4 items-center">
