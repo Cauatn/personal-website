@@ -2,11 +2,7 @@ import "./App.css";
 import Root from "./routes/root";
 
 function App() {
-  return (
-    <>
-      <Root />
-    </>
-  );
+  return <Root />;
 }
 
 export default App;

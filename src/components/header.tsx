@@ -9,6 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
+import { ModeToggle } from "./mode-toggle";
 
 export default function Header() {
   return (
@@ -40,15 +41,16 @@ export default function Header() {
             </DialogContent>
           </Dialog>
           <GithubBanner />
+          <div
+            data-orientation="vertical"
+            role="none"
+            className="shrink-0 bg-border h-[40px] w-[1px]"
+          >
+            {""}
+          </div>
+          <ModeToggle />
         </div>
       </nav>
-      <div
-        data-orientation="horizontal"
-        role="none"
-        className="shrink-0 bg-border h-[1px] w-full mt-4"
-      >
-        {""}
-      </div>
     </header>
   );
 }
