@@ -79,7 +79,7 @@ export default function Main() {
           </div>
           <div className="max-w-[600px] space-y-1 justify-start px-4 md:px-8 lg:pt-0">
             <h3 className="text-xl font-bold">Educação</h3>
-            <p className="text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="text-gray-500 dark:text-gray-400 md:text-md/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Engenharia de computação, UNIVASF (2022 - Cursando)
             </p>
           </div>
