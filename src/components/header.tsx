@@ -13,7 +13,7 @@ import { ModeToggle } from "./mode-toggle";
 
 export default function Header() {
   return (
-    <header className="w-full backdrop-filter backdrop-blur-sm py-4 md:py-6">
+    <header className="w-full backdrop-filter backdrop-blur-sm py-4 md:py-6 border-b-[1px]">
       <nav className="container flex items-center justify-between px-4 md:px-6">
         <Link className="inline-flex items-center space-x-3" to={""}>
           <CodeIcon className="size-8" />
@@ -30,8 +30,8 @@ export default function Header() {
                   Sobre mim
                 </DialogTitle>
                 <DialogDescription className="max-w-3xl text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Sou um engenheiro de frontend que ama criar interfaces de
-                  usuário interessantes e acessíveis. <br />
+                  Sou um desenvolvedor que ama criar interfaces de usuário
+                  interessantes e acessíveis. <br />
                   Adoro a combinação de criatividade e lógica que vem com o
                   desenvolvimento web. <br />
                   Quando não estou codificando, você pode me encontrar

@@ -1,12 +1,13 @@
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { Link } from "react-router-dom";
 import CurriculumDialog from "./curriculum-pdf";
+import Typewriter from "typewriter-effect";
 
 export default function Main() {
   function scrollToBottom() {
     window.scrollTo({
       top: document.documentElement.scrollHeight,
-      behavior: "smooth", // para um scroll suave
+      behavior: "smooth",
     });
   }
 
@@ -16,15 +17,32 @@ export default function Main() {
         <div className="lg:container md:gap-8 lg:gap-20 flex lg:flex-row justify-between flex-col-reverse gap-4">
           <div className="flex flex-col min-[300px]:grid gap-4 md:gap-8 lg:gap-12">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Engenheiro de Software
-              </h1>
+              <Typewriter
+                options={{
+                  cursorClassName: "Typewriter__cursor",
+                  cursor: "<span style='font-size: 2.8rem;'> |<span/>",
+                }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString(
+                      "<span style='letter-spacing: -0.05em;font-weight: 700;font-size: 3rem/* 48px */;line-height: 1;' >Engenheiro de Software</span>"
+                    )
+                    .deleteChars(8)
+                    .typeString(
+                      "<span style='letter-spacing: -0.05em;font-weight: 700;font-size: 3rem/* 48px */;line-height: 1;'> Computação</span>"
+                    )
+                    .deleteAll()
+                    .typeString(
+                      "<span style='letter-spacing: -0.05em;font-weight: 700;font-size: 3rem/* 48px */;line-height: 1;'>Front-End Developer</span>"
+                    )
+                    .start();
+                }}
+              />
               <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 Transformando ideais em experiências interativas. Interessado na
                 junção entre design e código que o desenvolvimento Web traz.
               </p>
             </div>
-
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <CurriculumDialog />
               <Link
@@ -51,17 +69,17 @@ export default function Main() {
             />
           </div>
         </div>
-        <div className="space-y-4 py-4">
-          <div className="max-w-[600px] space-y-1 justify-start px-4 md:px-8 lg:pt-6">
+        <div className="space-y-4 py-2">
+          <div className="max-w-[800px] space-y-1 justify-start px-4 md:px-8 lg:pt-6">
             <h3 className="text-xl font-bold">Habilidades</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-sm text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Node.Js, React, Next.js, Flutter, Prisma, JavaScript, Tailwind
               CSS.
             </p>
           </div>
-          <div className="max-w-[600px] space-y-1 justify-start px-4 md:px-8 lg:pt-6">
+          <div className="max-w-[600px] space-y-1 justify-start px-4 md:px-8 lg:pt-0">
             <h3 className="text-xl font-bold">Educação</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Engenharia de computação, UNIVASF (2022 - Cursando)
             </p>
           </div>
