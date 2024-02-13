@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
+import pdf from "@/assets/curriculum.pdf";
 
 export default function CurriculumDialog() {
   return (
@@ -9,7 +10,7 @@ export default function CurriculumDialog() {
         <ArrowRightIcon className="w-4 h-4" />
       </DialogTrigger>
       <DialogContent className="top-[50%] flex items-center justify-center p-8 pt-9">
-        <iframe src="src\components\teste.pdf" width="640" height="480" />
+        <iframe src={pdf} width="640" height="480" />
       </DialogContent>
     </Dialog>
   );
